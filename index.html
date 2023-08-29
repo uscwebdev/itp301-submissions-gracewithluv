@@ -6,8 +6,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+      <title> grace chisomaga nwankwo | student page </title>
    </head>
-   <title> grace chisomaga nwankwo | student page </title>
    <meta name="viewport" content="width=device-width,initial-scale=1">
    <link rel="stylesheet" href="">
    <style>
@@ -58,21 +58,32 @@
       transition: 0.4s ease-in;
       }
       .underline {
-         color: white;
-         width: 30px;
+      color: white;
+      width: 30px;
       }
-     #columns {
+      #columns {
       margin: 0 auto;
       width: 590px;
-     }
-     .column1 {
+      }
+      .column1 {
       float: left;
       width: 270px;
-     }
-     .column2 {
+      }
+      .column2 {
       float: right;
       width: 270px;
-     }
+      }
+      a {
+         text-decoration: none;
+         color: black;
+         transition: 0.3s ease-in;
+      }
+        a:hover {
+         text-decoration: none;
+         color: cornflowerblue;
+         font-weight: bold;
+         transition: 0.3s ease-in;
+      }
    </style>
    <script src=""></script>
    <body>
@@ -84,14 +95,14 @@
          <button class="color1">favorite color no.1</button>
          <button class="color2">favorite color no.2</button>
          <button class="color3">favorite color no.3</button>
-          <button class="color4">favorite color no.4</button>
+         <button class="color4">favorite color no.4</button>
          <button class="reset">reset bg</button>
          <br><br>
          <div id="columns">
             <div class="column1">
                <h3> assignments </h3>
                <hr class="underline">
-               <p> A01 - photo gallery </p>
+               <p> <a href="assignment1/index.html">A01 - photo gallery </a></p>
             </div>
             <div class="column2">
                <h3> labs </h3>
@@ -100,27 +111,26 @@
             </div>
          </div>
       </div>
-
       <script type="text/javascript">
          document.querySelector('.color1').onclick = function(){
-         	document.querySelector('#main').style.backgroundColor = "#DDEEFE";
+            document.querySelector('#main').style.backgroundColor = "#DDEEFE";
             document.querySelector('body').style.color = "#000000";
          }
          document.querySelector('.color2').onclick = function(){
-         	document.querySelector('#main').style.backgroundColor = "#FFFFDA";
-         	document.querySelector('body').style.color = "#000000";
+            document.querySelector('#main').style.backgroundColor = "#FFFFDA";
+            document.querySelector('body').style.color = "#000000";
          }
          document.querySelector('.color3').onclick = function (){
-         	document.querySelector('#main').style.backgroundColor = "#122448";
-         	document.querySelector('body').style.color = "#FFFFFF";
+            document.querySelector('#main').style.backgroundColor = "#122448";
+            document.querySelector('body').style.color = "#FFFFFF";
          }
           document.querySelector('.color4').onclick = function (){
             document.querySelector('#main').style.backgroundColor = "#8D9A8B";
             document.querySelector('body').style.color = "#FFFFFF";
          }
          document.querySelector('.reset').onclick = function (){
-         	document.querySelector('#main').style.backgroundColor = "#FFFFFF";
-         	document.querySelector('body').style.color = "#000000";
+            document.querySelector('#main').style.backgroundColor = "#FFFFFF";
+            document.querySelector('body').style.color = "#000000";
          }
       </script>
    </body>
