@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
+   <head>
+      <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/008/480/752/original/red-heart-icon-simple-doodle-illustration-with-red-heart-icon-free-png.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+   </head>
+   <title> grace chisomaga nwankwo | student page </title>
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="">
+   <style>
+      body {
+      background-color: #F9FAFF;
+      font-family: 'Karla', sans-serif ;
+      }
+      h1 {
+      font-family: 'Roboto Mono', sans-serif ;
+      }
+      #main {
+      margin: 0 auto;
+      margin-top: 12%;
+      width: 700px;
+      padding: 40px;
+      background-color: white;
+      border: 1.5px dashed cornflowerblue;
+      text-align: center;
+      overflow: auto;
+      }
+      /* #column1 {
+      float: left;
+      }*/
+      #header, #next {
+      width: 60px;
+      }
+      #next {
+      margin-bottom: px;
+      }
+      #clearfloat {
+      float: none;
+      }
+      button {
+      margin: 0px 15px;
+      padding: 7px;
+      font-family: 'Karla', sans-serif;
+      border-radius: 10px;
+      border: 1px dashed cornflowerblue;
+      background-color: white;
+      transition: 0.4s ease-in;
+      }
+      .color1, .color2 .color3, .color4, .reset {
+      transition: 0.4s ease-in;
+      }
+      .color1:hover, .color2:hover, .color3:hover, .color4:hover, .reset:hover {
+      background-color: #8E9DD3;
+      color: white;
+      transition: 0.4s ease-in;
+      }
+      .underline {
+         color: white;
+         width: 30px;
+      }
+     #columns {
+      margin: 0 auto;
+      width: 590px;
+     }
+     .column1 {
+      float: left;
+      width: 270px;
+     }
+     .column2 {
+      float: right;
+      width: 270px;
+     }
+   </style>
+   <script src=""></script>
+   <body>
+      <div id="main">
+         <h1> grace chisom nwankwo 🇳🇬</h1>
+         <hr id="header">
+         <p> email me @ gnwankwo@usc.edu :) </p>
+         <br>
+         <button class="color1">favorite color no.1</button>
+         <button class="color2">favorite color no.2</button>
+         <button class="color3">favorite color no.3</button>
+          <button class="color4">favorite color no.4</button>
+         <button class="reset">reset bg</button>
+         <br><br>
+         <div id="columns">
+            <div class="column1">
+               <h3> assignments </h3>
+               <hr class="underline">
+               <p> A01 - photo gallery </p>
+            </div>
+            <div class="column2">
+               <h3> labs </h3>
+               <hr class="underline">
+               <p> none yet </p>
+            </div>
+         </div>
+      </div>
+
+      <script type="text/javascript">
+         document.querySelector('.color1').onclick = function(){
+         	document.querySelector('#main').style.backgroundColor = "#DDEEFE";
+            document.querySelector('body').style.color = "#000000";
+         }
+         document.querySelector('.color2').onclick = function(){
+         	document.querySelector('#main').style.backgroundColor = "#FFFFDA";
+         	document.querySelector('body').style.color = "#000000";
+         }
+         document.querySelector('.color3').onclick = function (){
+         	document.querySelector('#main').style.backgroundColor = "#122448";
+         	document.querySelector('body').style.color = "#FFFFFF";
+         }
+          document.querySelector('.color4').onclick = function (){
+            document.querySelector('#main').style.backgroundColor = "#8D9A8B";
+            document.querySelector('body').style.color = "#FFFFFF";
+         }
+         document.querySelector('.reset').onclick = function (){
+         	document.querySelector('#main').style.backgroundColor = "#FFFFFF";
+         	document.querySelector('body').style.color = "#000000";
+         }
+      </script>
+   </body>
+</html>
