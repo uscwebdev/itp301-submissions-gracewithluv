@@ -73,12 +73,12 @@
       float: right;
       width: 270px;
       }
-      a {
+      .links {
          text-decoration: none;
          color: black;
          transition: 0.3s ease-in;
       }
-        a:hover {
+        .links:hover {
          text-decoration: none;
          color: cornflowerblue;
          font-weight: bold;
@@ -102,14 +102,13 @@
             <div class="column1">
                <h3> assignments </h3>
                <hr class="underline">
-             <p><a href="assignment1/index.html">A01 - photo gallery </a></p>
-             <p><a href="assignment1/index.html">A02 - shopping cart </a></p>
-
+             <p><a class="links" href="assignment1/index.html">A01 - photo gallery </a></p>
+             <p><a class="links" href="assignment1/index.html">A01 - photo gallery </a></p>
             </div>
             <div class="column2">
                <h3> labs </h3>
                <hr class="underline">
-               <p> L02 - currency converter </p>
+               <p><a class="links" href="lab02/index.html">L02 - currency converter</a></p>
                <p> </p>
             </div>
          </div>
@@ -118,27 +117,29 @@
          document.querySelector('.color1').onclick = function(){
             document.querySelector('#main').style.backgroundColor = "#DDEEFE";
             document.querySelector('body').style.color = "#000000";
-             document.querySelector('a').style.color = "#000000";
+             document.querySelector('.links').style.color = "#000000";
          }
          document.querySelector('.color2').onclick = function(){
             document.querySelector('#main').style.backgroundColor = "#FFFFDA";
             document.querySelector('body').style.color = "#000000";
-             document.querySelector('a').style.color = "#000000";
+            document.querySelector('.links').style.color = "#000000";
          }
          document.querySelector('.color3').onclick = function (){
             document.querySelector('#main').style.backgroundColor = "#122448";
-            document.querySelector('body').style.color = "#FFFFFF";
-               document.querySelector('a').style.color = "#FFFFFF";
+            document.querySelector('body').style.color = "white";
+            document.querySelector(".links").style.color = "#FFFFFF";
+            console.log('body turned white');
+
          }
           document.querySelector('.color4').onclick = function (){
             document.querySelector('#main').style.backgroundColor = "#8D9A8B";
             document.querySelector('body').style.color = "#FFFFFF";
-              document.querySelector('a').style.color = "#FFFFFF";
+            document.querySelector('.links').style.color = "#FFFFFF";
          }
          document.querySelector('.reset').onclick = function (){
             document.querySelector('#main').style.backgroundColor = "#FFFFFF";
             document.querySelector('body').style.color = "#000000";
-             document.querySelector('a').style.color = "#000000";
+             document.querySelector('.links').style.color = "#000000";
          }
       </script>
    </body>
