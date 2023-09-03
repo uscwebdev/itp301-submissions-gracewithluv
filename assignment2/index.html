@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
+   <head>
+      <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/102/102655.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200;400&family=Roboto+Mono&display=swap" rel="stylesheet">
+      <title> your cart | grace's album site (AO3) </title>
+   </head>
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="">
+   <style>
+      body {
+      background-color: #F9FAFF;
+      font-family: 'Karla', sans-serif ;
+      margin: 0;
+      font-weight: 200;
+      padding: 0;
+      }
+      h1 {
+      font-family: 'Roboto Mono', sans-serif;
+      margin-top: -10px;
+      }
+      #main {
+      margin: 0 auto;
+      width: 900px;
+      padding: 20px;
+      margin-top: 8%;
+      background-color: white;
+      border: 1px dashed #91AFDC;
+      text-align: center;
+      overflow: auto;
+      }
+      #header, #next {
+      width: 60px;
+      }
+      .checkout {
+      margin-top: 10px;
+      margin-right: 90px;
+      padding: 7px;
+      float: right;
+      font-family: 'Karla', sans-serif;
+      border-radius: 10px;
+      border: 1px dashed #554C3A;
+      background-color: white;
+      transition: 0.3s ease-in;
+      }
+
+      .checkout:hover {
+      background-color: #91AFDC;
+      border: 1px dashed white;
+      color: white;
+      transition: 0.3s ease-in;
+      }
+      .underline {
+      color: white;
+      width: 30px;
+      }
+      .thumbnail {
+      display: inline-block;
+      width: 190px;
+      margin: 0 auto;
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+      }
+      .landscape {
+      width: auto;
+      height: 100%;
+      }
+      .portait {
+      width: 100%;
+      height: auto;
+      }
+      .item-gallery {
+      margin: 0 auto;
+      }
+      .item, .item-right {
+      display: inline-block;
+      }
+      .item-right {
+      margin-right: 40px;
+      }
+      #mainheader {
+      width: auto;
+      height: 30px;
+      }
+      .scrollinghead {
+      height: 30px;
+      padding: 1px;
+      overflow: hidden;
+      position: relative;
+      background: #FFFEF9;
+      border-bottom: 1px solid #91AFDC;
+      }
+      .scrollinghead p {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      line-height: 30px;
+      font-weight: 400;
+      color: #486B9E;
+      transform:translateX(100%);
+      animation: scroll-left 16s linear infinite;
+      }
+      @keyframes scroll-left {
+      0%   {
+      transform: translateX(100%);       
+      }
+      100% {
+      transform: translateX(-100%); 
+      }
+      }
+      .item-gallery {
+      margin: 0 auto;
+      }
+      .item p, .item-right p {
+      font-size: 13px;
+      line-height: 1.5px;
+      }
+      #zb1, #staycgirls, #omah {
+      cursor: pointer;
+      }
+      .caption {
+      margin: 0;
+      display: inline;
+      }
+      .zerobase {
+      color: #7db1de;
+      font-weight: 400;
+      }
+      .omahlay {
+      color: #cda8f5;
+      font-weight: 400;
+      } 
+      .stayc {
+      color: #2A4630;
+      font-weight: 400;
+      }
+      .priceview {
+      float: left;
+      font-weight: bolder;
+      margin-left: 65px;
+      }
+      #footer {
+      background-color: #91AFDC;;
+      text-align: center;
+      color: #FFFEF9;
+      height: 25px;
+      width: 100%;
+      line-height: 3px;
+      border-top: 1px solid #FFFEF9;
+      position: fixed;
+      font-size: 12px;
+      bottom: 0;
+      }
+   </style>
+   <script src=""></script>
+   <body>
+      <div id="mainheader">
+         <div class="scrollinghead">
+            <p>WELCOME, NEW SHOPPERS! USE CODE 'ITP301' FOR 30.1% OFF ANY ALBUM, PHOTOBOOK, POSTER, OR PHOTOCARD! (NEW USERS ONLY) </p>
+         </div>
+      </div>
+      <br>
+      <div id="main">
+         <h1> your cart </h1>
+         <hr id="header">
+         <br>
+         <div class="item-gallery">
+            <div class="item-right">
+               <div class="thumbnail"> <img class="portait" id="zb1" src="yits.jpeg" alt="Album cover for ZEROBASEONE's EP, Youth in the Shade, cover"/></div>
+               <p> <span class="zerobase"> <b> ZEROBASEONE - "Youth in The Shade" 1st EP </b> </span> </p>
+               <p> <b>Inclusions:</b> CD, Poster, 2 Photocards, Freebie </p>
+               <p> <span class="zerobase">$25 </span> </p>
+            </div>
+            <div class="item-right">
+               <div class="thumbnail">
+                  <img class="portait" id="staycgirls" src="stereo.jpeg" alt="Album cover for STAYC's EP, STEREOTYPE"> 
+               </div>
+               <p> <span class="stayc"> STAYC "STEREOTYPE" Single Album </span></p>
+               <p> <b>Inclusions:</b> CD, Poster, Photocard, Fragrance Card</p>
+               <p> <span class="stayc">$29</span> </p>
+            </div>
+            <div class="item">
+               <div class="thumbnail"> <img class="portait" id="omah" src="boyalone.jpeg" alt="Album cover for Omah Lay's Album, Boy Alone"/> </div>
+               <p> <span class="omahlay"> Omah Lay "Boy Alone" First Studio Album </span></p>
+               <p> <b>Inclusions:</b> CD, Poster, Signed Postcard </p>
+               <p> <span class="omahlay">$39</span></p>
+            </div>
+         </div>
+         <br>
+         <p class="priceview"> Shopping Cart Total: $<span id="count2">0</span> </p>
+         <a href="https://uscwebdev.github.io/itp301-submissions-gracewithluv/"><button class="checkout">check out</button></a>
+      </div>
+      <div id="footer">
+         <p> © 2023 grace's album shop </p>
+      </div>
+      <script type="text/javascript">
+         /*
+         /* workflow #1: changing cart total on the top */
+         /* nvm i scrapped this bc can u have two onclick functions??? */
+         
+         /* new workflow for cart:
+         1. user will click on album 
+         2. save current count as a variable 
+         3. then convert price to a numeric value using parseInt (), 
+         4. increment 'numChanges' by album price (this took forever to figure out omg)
+         5. display new shopping total */
+         
+         
+         /* 1. user will click on zb1 album */
+         document.querySelector('#zb1').onclick = function(){
+         
+         /* 2. save current price in a variable price */
+         var price = document.querySelector("#count2").innerHTML;
+         
+         /* 3. conv price to numeric value using parseInt() */
+         price = parseInt(price);
+         
+         // 4. increment price by album price ($25) //
+         price+=25;
+         
+         //5.  display new cart price to users //
+         document.querySelector('#count2').innerHTML = price;
+         document.querySelector('#count2').style.color = '#7db1de';
+         };
+         
+         /*stayc time */
+         /* 1. user will click on stayc album */
+         document.querySelector('#staycgirls').onclick = function(){
+         /* 2. save current price in a variable price */
+         var price = document.querySelector("#count2").innerHTML;
+         
+         /* 3. conv price to numeric value using parseInt() */
+         price = parseInt(price);
+         
+         // 4. increment price by album price ($29) //
+         price+=29;
+         
+         //5.  display new cart price to users //
+         document.querySelector('#count2').innerHTML = price;
+         document.querySelector('#count2').style.color = '#2A4630';
+         
+         };
+         /*omah lay timeeee */
+         /* 1. user will click on omah lay album */
+         document.querySelector('#omah').onclick = function(){
+         /* 2. save current price in a variable price */
+         var price = document.querySelector("#count2").innerHTML;
+         
+         /* 3. conv price to numeric value using parseInt() */
+         price = parseInt(price);
+         
+         // 4. increment price by album price ($29) //
+         price+=39;
+         
+         //5.  display new cart price to users //
+         document.querySelector('#count2').innerHTML = price;
+         document.querySelector('#count2').style.color = '#cda8f5';
+         };
+         
+      </script>
+   </body>
+</html>
