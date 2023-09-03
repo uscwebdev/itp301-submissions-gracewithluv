@@ -103,7 +103,7 @@
       font-weight: 400;
       color: #486B9E;
       transform:translateX(100%);
-      animation: scroll-left 16s linear infinite;
+      animation: scroll-left 18s linear infinite;
       }
       @keyframes scroll-left {
       0%   {
@@ -186,9 +186,9 @@
             </div>
             <div class="item">
                <div class="thumbnail"> <img class="portait" id="omah" src="boyalone.jpeg" alt="Album cover for Omah Lay's Album, Boy Alone"/> </div>
-               <p> <span class="omahlay"> Omah Lay "Boy Alone" First Studio Album </span></p>
+               <p> <span class="omahlay"> Omah Lay "Boy Alone" 1st Studio Album </span></p>
                <p> <b>Inclusions:</b> CD, Poster, Signed Postcard </p>
-               <p> <span class="omahlay">$39</span></p>
+               <p> <span class="omahlay">$35</span></p>
             </div>
          </div>
          <br>
@@ -225,12 +225,14 @@
          
          //5.  display new cart price to users //
          document.querySelector('#count2').innerHTML = price;
-         document.querySelector('#count2').style.color = '#7db1de';
+         document.querySelector('#count2').style.color = "#7db1de";
          };
          
-         /*stayc time */
+         /* ~ stayc time ~ */
+
          /* 1. user will click on stayc album */
          document.querySelector('#staycgirls').onclick = function(){
+
          /* 2. save current price in a variable price */
          var price = document.querySelector("#count2").innerHTML;
          
@@ -240,28 +242,29 @@
          // 4. increment price by album price ($29) //
          price+=29;
          
-         //5.  display new cart price to users //
+         //5. display new cart price to users //
          document.querySelector('#count2').innerHTML = price;
-         document.querySelector('#count2').style.color = '#2A4630';
-         
+         document.querySelector('#count2').style.color = "#2A4630";
          };
+
          /*omah lay timeeee */
+
          /* 1. user will click on omah lay album */
          document.querySelector('#omah').onclick = function(){
+
          /* 2. save current price in a variable price */
          var price = document.querySelector("#count2").innerHTML;
          
          /* 3. conv price to numeric value using parseInt() */
          price = parseInt(price);
          
-         // 4. increment price by album price ($29) //
-         price+=39;
+         // 4. increment price by album price ($35) //
+         price+=35;
          
          //5.  display new cart price to users //
          document.querySelector('#count2').innerHTML = price;
-         document.querySelector('#count2').style.color = '#cda8f5';
+         document.querySelector('#count2').style.color = "#cda8f5";
          };
-         
       </script>
    </body>
 </html>
