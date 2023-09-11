@@ -4,6 +4,8 @@
    <head>
       <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/102/102655.png">
       <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lecture.css">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200;400&family=Roboto+Mono&display=swap" rel="stylesheet">
       <title> your cart | grace's album site (AO3) </title>
@@ -26,7 +28,7 @@
       margin: 0 auto;
       width: 900px;
       padding: 20px;
-      margin-top: 8%;
+      margin-top: 7%;
       background-color: white;
       border: 1px dashed #91AFDC;
       text-align: center;
@@ -46,7 +48,6 @@
       background-color: white;
       transition: 0.3s ease-in;
       }
-
       .checkout:hover {
       background-color: #91AFDC;
       border: 1px dashed white;
@@ -62,6 +63,7 @@
       width: 190px;
       margin: 0 auto;
       height: 190px;
+      margin-bottom: 10px;
       overflow: hidden;
       position: relative;
       }
@@ -139,10 +141,15 @@
       color: #2A4630;
       font-weight: 400;
       }
-      .priceview {
+      .fundview {
       float: left;
       font-weight: bolder;
       margin-left: 65px;
+      }
+      .priceview {
+      float: right;
+      font-weight: bolder;
+      margin-right: 30px;
       }
       #footer {
       background-color: #91AFDC;;
@@ -155,6 +162,13 @@
       position: fixed;
       font-size: 12px;
       bottom: 0;
+      }
+      #footer p {
+      margin-top: 10px;
+      }
+      #moola-btn {
+      background-color: #91AFDC;
+      border: white;
       }
    </style>
    <script src=""></script>
@@ -191,9 +205,24 @@
                <p> <span class="omahlay">$35</span></p>
             </div>
          </div>
-         <br>
+         <p class="fundview"> Remaining Funds: $<span id="moneyleft">0</span> </p>
          <p class="priceview"> Shopping Cart Total: $<span id="count2">0</span> </p>
-         <input type="text" id="calc-input" class="form-control">
+         <br>
+         <div class="row mt-3">
+            <div class="col-4 col-md-3 col-lg-2">
+               <div class="input-group">
+                  <div class="input-group-append">
+                     <div class="input-group-text">$</div>
+                  </div>
+                  <input type="text" id="moola-input" class="form-control">
+               </div>
+               <!-- .input-group -->
+            </div>
+            <!-- .col -->
+            <button id="moola-btn" class="btn btn-primary">Add Moola</button>
+         </div>
+      </div>
+      </div>
       <div id="footer">
          <p> © 2023 grace's album shop </p>
       </div>
@@ -215,12 +244,19 @@
          
          /* 2. save current price in a variable price */
          var price = document.querySelector("#count2").innerHTML;
+         var num1 = document.querySelector('#moneyleft').value;
+          var num2 = '25';
+         
+         
          
          /* 3. conv price to numeric value using parseInt() */
          price = parseInt(price);
+         num2 = parseInt(num2);
+         
          
          // 4. increment price by album price ($25) //
          price+=25;
+         
          
          //5.  display new cart price to users //
          document.querySelector('#count2').innerHTML = price;
@@ -228,10 +264,10 @@
          };
          
          /* ~ stayc time ~ */
-
+         
          /* 1. user will click on stayc album */
          document.querySelector('#staycgirls').onclick = function(){
-
+         
          /* 2. save current price in a variable price */
          var price = document.querySelector("#count2").innerHTML;
          
@@ -245,12 +281,12 @@
          document.querySelector('#count2').innerHTML = price;
          document.querySelector('#count2').style.color = "#2A4630";
          };
-
+         
          /*omah lay timeeee */
-
+         
          /* 1. user will click on omah lay album */
          document.querySelector('#omah').onclick = function(){
-
+         
          /* 2. save current price in a variable price */
          var price = document.querySelector("#count2").innerHTML;
          
@@ -264,6 +300,59 @@
          document.querySelector('#count2').innerHTML = price;
          document.querySelector('#count2').style.color = "#cda8f5";
          };
+         
+         document.querySelector('#moola-btn').onclick = function () {
+          var num1 = document.querySelector('#moola-input').value;
+            num1 = parseInt(num1);
+            document.querySelector('#moola-input').value = '';
+            document.querySelector('#moneyleft').innerHTML = num1;
+            }
+         
+            document.querySelector('#zb1').onclick = function () {
+            var price = document.querySelector("#count2").innerHTML;
+            price = parseInt(price);
+            var conv = 25 + price;
+            var funds = document.querySelector('#moneyleft').innerHTML;
+            funds = parseInt(funds);
+            if (funds >=25) {
+               document.querySelector("#moneyleft").innerHTML = funds - 25;
+               document.querySelector("#count2").innerHTML = conv;
+         
+            } else {
+              alert("Insufficient Funds. Reload to complete your purchase supporting ZEROBASEONE.");
+            }
+            }
+         
+            document.querySelector('#staycgirls').onclick = function () {
+            var price = document.querySelector("#count2").innerHTML;
+            price = parseInt(price);
+            var conv = 29 + price;
+            var funds = document.querySelector('#moneyleft').innerHTML;
+            funds = parseInt(funds);
+            if (funds >=29) {
+               document.querySelector("#moneyleft").innerHTML = funds - 29;
+               document.querySelector("#count2").innerHTML = conv;
+         
+            } else {
+              alert("Insufficient Funds. Reload to complete your purchase supporting STAYC.");
+            }
+            }
+         
+            document.querySelector('#omah').onclick = function () {
+            var price = document.querySelector("#count2").innerHTML;
+            price = parseInt(price);
+            var conv = 39 + price;
+            var funds = document.querySelector('#moneyleft').innerHTML;
+            funds = parseInt(funds);
+            if (funds >=39) {
+               document.querySelector("#moneyleft").innerHTML = funds - 39;
+               document.querySelector("#count2").innerHTML = conv;
+         
+            } else {
+              alert("Insufficient Funds. Reload to complete your purchase supporting Omah Lay.");
+            }
+            }
+         
       </script>
    </body>
 </html>
