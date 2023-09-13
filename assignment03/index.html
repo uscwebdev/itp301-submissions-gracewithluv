@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>JS Calculator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <style>
+         #display {
+         font-size: 2em;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <h1 class="col-12 text-center mt-5">grace's js calculator </h1>
+         </div>
+         <!-- .row -->
+         <div class="row">
+            <div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+               <div class="row">
+                  <input type="text" id="display" class="col-12 text-right form-control" value="0">
+               </div>
+               <!-- .row -->
+               <div class="row">
+                  <button id="clear" class="col-9 btn btn-lg btn-outline-dark">AC</button>
+                  <button id="calc-div" class="col-3 btn btn-lg btn-outline-dark">/</button>
+               </div>
+               <!-- .row -->
+               <div class="row">
+                  <button id="numba7" class="col-3 btn btn-lg btn-outline-dark">7</button>
+                  <button id="numba8" class="col-3 btn btn-lg btn-outline-dark">8</button>
+                  <button id="numba9" class="col-3 btn btn-lg btn-outline-dark">9</button>
+                  <button id="calc-mult" class="col-3 btn btn-lg btn-outline-dark">x</button>
+               </div>
+               <!-- .row -->
+               <div class="row">
+                  <button id="numba4" class="col-3 btn btn-lg btn-outline-dark">4</button>
+                  <button id="numba5" class="col-3 btn btn-lg btn-outline-dark">5</button>
+                  <button id ="numba6" class="col-3 btn btn-lg btn-outline-dark">6</button>
+                  <button id="calc-sub" class="col-3 btn btn-lg btn-outline-dark">-</button>
+               </div>
+               <!-- .row -->
+               <div class="row">
+                  <button id="numba1" value ="1" class="col-3 btn btn-lg btn-outline-dark">1</button>
+                  <button id ="numba2" class="col-3 btn btn-lg btn-outline-dark">2</button>
+                  <button id ="numba3" class="col-3 btn btn-lg btn-outline-dark">3</button>
+                  <button id="calc-add" class="col-3 btn btn-lg btn-outline-dark">+</button>
+               </div>
+               <!-- .row -->
+               <div class="row">
+                  <button id="numba0" class="col-6 btn btn-lg btn-outline-dark">0</button>
+                  <button id="decimal" class="col-3 btn btn-lg btn-outline-dark">.</button>
+                  <button id="calc-equal" class="col-3 btn btn-lg btn-outline-dark">=</button>
+               </div>
+               <!-- .row -->
+            </div>
+            <!-- #calculator -->
+         </div>
+         <!-- .row -->
+      </div>
+      <script>
+         var num1;
+         var operation; 
+         
+         	document.querySelector("#clear").onclick = function () {
+         		document.querySelector('#display').value = '0';
+         	}   
+         	document.querySelector("#numba1").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '1';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'1';
+         		}
+         
+         	}		
+         	document.querySelector("#numba2").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '2';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'2';
+         		}
+         
+         	}
+         	document.querySelector("#numba3").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '3';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'3';
+         		}
+         	}	
+         	document.querySelector("#numba4").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '4';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'4';
+         		}
+         	}
+         	document.querySelector("#numba5").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '5';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'5';
+         		}
+         	}
+         	document.querySelector("#numba6").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '6';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'6';
+         		}
+         	}
+         	document.querySelector("#numba7").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '7';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'7';
+         		}
+         
+         	}
+         	document.querySelector("#numba8").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '8';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'8';
+         		}
+         
+         	}
+         	document.querySelector("#numba9").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '9';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'9';
+         		}
+         
+         	}
+         	document.querySelector("#numba0").onclick = function () {
+         		var display = document.querySelector('#display').value;
+         		if (display == '0') {
+         			document.querySelector('#display').value = '0';
+         		}
+         		else {
+         			document.querySelector('#display').value = display +'0';
+         		}
+         
+         	}
+         	document.querySelector('#calc-add').onclick = function () {
+         	// save user input in global var 'num1' //
+         	num1 = document.querySelector('#display').value;
+         	num1 = parseInt(num1);
+         	// save op as (+;)
+         	operation = '+'
+         	// clear the input field.
+         	document.querySelector('#display').value = '';
+         }
+         	document.querySelector('#calc-sub').onclick = function () {
+         	// save user input in global var 'num1' //
+         	num1 = document.querySelector('#display').value;
+         	num1 = parseInt(num1);
+         	// save op as (+;)
+         	operation = '-'
+         	// clear the input field.
+         	document.querySelector('#display').value = '';
+         }
+         document.querySelector('#calc-mult').onclick = function () {
+         	// save user input in global var 'num1' //
+         	num1 = document.querySelector('#display').value;
+         	num1 = parseInt(num1);
+         	// save op as (+;)
+         	operation = '*'
+         	// clear the input field.
+         	document.querySelector('#display').value = '';
+         }
+         document.querySelector('#calc-div').onclick = function () {
+         	// save user input in global var 'num1' //
+         	num1 = document.querySelector('#display').value;
+         	num1 = parseInt(num1);
+         	// save op as (+;)
+         	operation = '/'
+         	// clear the input field.
+         	document.querySelector('#display').value = '';
+         }
+         
+         	document.querySelector('#calc-equal').onclick = function() {
+         		// save user input to var num2 --> convert to number
+         		var num2 = document.querySelector('#display').value;
+         		num2 = parseInt(num2);
+         		// created a result 
+         		var result = 'Error';
+         		// operation where we add + subtract the numbers //
+         		if (operation == '+') {
+         			result = num1 + num2;
+         		} else if (operation == '-') {
+         			result = num1 - num2;
+         		} else if (operation == '*') {
+         			result = num1 * num2;
+         		} else if (operation == '/') {
+         			result = num1 / num2;
+         		}
+         		document.querySelector('#display').value = result;
+         	}
+         	document.querySelector('#decimal').onclick = function () {
+         		disp = document.querySelector('#display').value;
+         		if (!disp.includes('.')) {
+         			document.querySelector('#display').value = disp + '.';
+         		} else {
+         			alert('Only one decimal!');
+         		}
+         	}
+      </script><!-- .container -->
+   </body>
+</html>
