@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
    <meta charset="UTF-8">
-   <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/010/897/128/original/dice-game-cube-png.png">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
-   <title> grace's assignment 4 |  liar's dice </title>
+      <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/010/897/128/original/dice-game-cube-png.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+      <title> grace's assignment 4 |  liar's dice </title>
    <meta name="viewport" content="width=device-width,initial-scale=1">
    <link rel="stylesheet" href="style.css">
    <style>
@@ -66,7 +66,8 @@
       border: 3px solid white;
       overflow: hidden;
       }
-      #guess-btn {
+
+       #guess-btn {
       background-color: #9daf88;
       color: white;
       border: 1px solid green;
@@ -75,96 +76,95 @@
       display: inline;
       font-family: 'Karla', sans-serif;
       }
-      .diceface {
-      display: inline;
+   .diceface {
+         display: inline;
       }
       .diceface img {
-      width: 90px;
-      height: 90px;
-      display: inline;
-      margin: 15px;
+         width: 90px;
+         height: 90px;
+         display: inline;
+         margin: 15px;
       }
       #caption {
-      font-size: 20px;
+         font-size: 20px;
       }
    </style>
-   </head>
+</head>
    <body>
-      <div id="main">
-         <div class="row mt-3">
+   <div id="main">
+      <div class="row mt-3">
             <h1> – liar's dice — </h1>
             <div class="col-4 col-md-3 col-lg-2">
                <div class="input-group">
                   <div class="input-group-append">
-                     <div class="input-group-text"> enter your guess:</div>
-                     <br>
+                     <div class="input-group-text"> enter your guess:</div><br>
                   </div>
                   <input type="text" id="guess-input" class="form-control">
                </div>
                <!-- .input-group -->
             </div>
             <!-- .col -->
-            <br> <button id="guess-btn" class="btn btn-primary"> Test your Guess </button>
+           <br> <button id="guess-btn" class="btn btn-primary"> Test your Guess </button>
          </div>
          <p id="caption"> <b>Results:</b> <span id="results"></span> </p>
-         <div id="dicebox">
-            <div id="dice1" class="diceface">
-               <img src="dicefaces/1.png" alt="1">
-            </div>
-            <div id="dice2" class="diceface">
-               <img src="dicefaces/2.png" alt="2">
-            </div>
-            <div id="dice3" class="diceface">
-               <img src="dicefaces/3.png" alt="3">
-            </div>
-            <div id="dice4" class="diceface">
-               <img src="dicefaces/4.png" alt="4">
-            </div>
+      <div id="dicebox">
+         <div id="dice1" class="diceface">
+         <img src="dicefaces/1.png" alt="1">
+      </div>
+         <div id="dice2" class="diceface">
+         <img src="dicefaces/2.png" alt="2">
+      </div>
+         <div id="dice3" class="diceface">
+         <img src="dicefaces/3.png" alt="3">
+      </div>
+         <div id="dice4" class="diceface">
+         <img src="dicefaces/4.png" alt="4">
+         </div>
             <div id="dice5" class="diceface">
-               <img src="dicefaces/5.png" alt="5">
-            </div>
+         <img src="dicefaces/5.png" alt="5">
+         </div>
             <div id="dice6" class="diceface">
-               <img src="dicefaces/6.png" alt="6">
-            </div>
+         <img src="dicefaces/6.png" alt="6">
+         </div>
          </div>
       </div>
-      <script type="text/javascript">
-         // for (var i = 0; i < 5, i++) {
-         //    var img = "dicefaces/" + numbers[i]+ ".png";
-         //    var change = "#dice" + (i+1);
-         //    document.querySelector(change + 'img').src = img;
-         // }
-         var check = false;
-         var diceface = document.querySelectorAll('.diceface');
-         document.querySelector("#guess-btn").onclick = function () {
-            var numbers = [];
+<script type="text/javascript">
+   // for (var i = 0; i < 5, i++) {
+   //    var img = "dicefaces/" + numbers[i]+ ".png";
+   //    var change = "#dice" + (i+1);
+   //    document.querySelector(change + 'img').src = img;
+   // }
+   var check = false;
+   var diceface = document.querySelectorAll('.diceface');
+   document.querySelector("#guess-btn").onclick = function () {
+      var numbers = [];
+
+   for (var i = 0; i < 5; i++) {
+      var num = Math.floor( Math.random() * 6 + 1);
+      numbers.push(num);
+      var guess = document.querySelector("#guess-input").value;
+      if (parseInt(guess) === num) {
+         check = true;
+      }
+   }
+   for (var i = 0; i < 5; i++) {
+      var img = "dicefaces/" + numbers[i]+ ".png";
+      var change = "#dice" + (i+1);
+      document.querySelector(change + ' img').src = img;
+   }
+   isCorrectGuess(check);
+   check = false;
+};
+function isCorrectGuess(check){
+   if (check === true) {
+      document.querySelector("#results").innerHTML = "You guessed it, baddie! You win!";
+      document.querySelector("#results").style.color = "green";
+   } else {
+      document.querySelector("#results").innerHTML = "Incorrect. You lose.";
+      document.querySelector("#results").style.color = "red";
+   }
+}
          
-         for (var i = 0; i < 5; i++) {
-            var num = Math.floor( Math.random() * 6 + 1);
-            numbers.push(num);
-            var guess = document.querySelector("#guess-input").value;
-            if (parseInt(guess) === num) {
-               check = true;
-            }
-         }
-         for (var i = 0; i < 5; i++) {
-            var img = "dicefaces/" + numbers[i]+ ".png";
-            var change = "#dice" + (i+1);
-            document.querySelector(change + ' img').src = img;
-         }
-         isCorrectGuess(check);
-         check = false;
-         };
-         function isCorrectGuess(check){
-         if (check === true) {
-            document.querySelector("#results").innerHTML = "You guessed it, baddie! You win!";
-            document.querySelector("#results").style.color = "green";
-         } else {
-            document.querySelector("#results").innerHTML = "Incorrect. You lose.";
-            document.querySelector("#results").style.color = "red";
-         }
-         }         
-            
       </script>
    </body>
 </html>
