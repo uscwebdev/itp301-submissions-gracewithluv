@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
    <meta charset="UTF-8">
-      <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/010/977/613/original/plaid-brown-heart-png.png">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
-      <title> grace's assignment 1 | gallery </title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/010/897/128/original/dice-game-cube-png.png">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+   <title> grace's assignment 4 |  liar's dice </title>
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="style.css">
    <style>
       body {
-      background-color: #FCF8F2;
+      background-color: #dde6d3;
       font-family: 'Karla', sans-serif ;
       }
       h1 {
@@ -19,11 +19,11 @@
       }
       #main {
       margin: 0 auto;
-      width: 750px;
+      width: 800px;
       padding: 40px;
-      margin-top: 2.5%;
+      margin-top: 12%;
       background-color: white;
-      border: .5px solid #554C3A;
+      border: 1px solid #9daf88;
       text-align: center;
       overflow: auto;
       }
@@ -66,114 +66,105 @@
       border: 3px solid white;
       overflow: hidden;
       }
-      .thumbnail2 {
-      width: 685px;
-      display: inline-block;
-      height: 300px;
-      margin: 0px 10px;
-      border: 3px solid white;
-      overflow: hidden;
+      #guess-btn {
+      background-color: #9daf88;
+      color: white;
+      border: 1px solid green;
+      padding: 6px;
+      border-radius: 10%;
+      display: inline;
+      font-family: 'Karla', sans-serif;
       }
-      .thumbnail2 img {
-      margin-top: -180px;
+      .diceface {
+      display: inline;
       }
-      .landscape {
-      width: auto;
-      height: 100%;
+      .diceface img {
+      width: 90px;
+      height: 90px;
+      display: inline;
+      margin: 15px;
       }
-      .portait {
-      width: 100%;
-      height: auto;
+      #caption {
+      font-size: 20px;
       }
    </style>
-</head>
+   </head>
    <body>
-      <br>
       <div id="main">
-      <h1> grace's photo gallery of interests</h1>
-      <hr id="header">
-      <p> explore some of my interests & hobbies by clicking on the photos below :) </p>
-      <br>
-      <div class="thumbnail">
-         <img class="portait" id="langlearn" src="language.jpeg" alt="learning languages, like chinese, spanish, and korean">
+         <div class="row mt-3">
+            <h1> – liar's dice — </h1>
+            <div class="col-4 col-md-3 col-lg-2">
+               <div class="input-group">
+                  <div class="input-group-append">
+                     <div class="input-group-text"> enter your guess:</div>
+                     <br>
+                  </div>
+                  <input type="text" id="guess-input" class="form-control">
+               </div>
+               <!-- .input-group -->
+            </div>
+            <!-- .col -->
+            <br> <button id="guess-btn" class="btn btn-primary"> Test your Guess </button>
+         </div>
+         <p id="caption"> <b>Results:</b> <span id="results"></span> </p>
+         <div id="dicebox">
+            <div id="dice1" class="diceface">
+               <img src="dicefaces/1.png" alt="1">
+            </div>
+            <div id="dice2" class="diceface">
+               <img src="dicefaces/2.png" alt="2">
+            </div>
+            <div id="dice3" class="diceface">
+               <img src="dicefaces/3.png" alt="3">
+            </div>
+            <div id="dice4" class="diceface">
+               <img src="dicefaces/4.png" alt="4">
+            </div>
+            <div id="dice5" class="diceface">
+               <img src="dicefaces/5.png" alt="5">
+            </div>
+            <div id="dice6" class="diceface">
+               <img src="dicefaces/6.png" alt="6">
+            </div>
+         </div>
       </div>
-      <div class="thumbnail">
-         <img class="portait" id="concert" src="concert1.jpeg" alt="attending concerts of all genres">
-      </div>
-      <div class="thumbnail">
-         <img class="portait" id="cookingg" src="cooking.jpeg" alt="baking & cooking">
-      </div>
-      <div class="thumbnail">
-         <img class="portait" id="cafe" src="cafe1.jpeg" alt="cafe-hopping (basically trying out new cafes)">
-      </div>
-       <div class="thumbnail">
-         <img class="portait" id="friends" src="friends.jpeg" alt="hanging out with my lovely friends :)">
-      </div>
-      <br><br>
-      <div class="thumbnail2">
-         <img class="portait" id="display" src="language.jpeg" alt="">
-      </div>
-      <p id="caption"> learning languages, like chinese, spanish, and korean</p>
-      <a href="https://uscwebdev.github.io/itp301-submissions-gracewithluv/"><button class="return">back home</button></a>
-   </div>
       <script type="text/javascript">
-
-         var thumbnail = document.querySelectorAll('.thumbnail');
-         var caption = document.querySelector('#caption');
-
-         for (var i = 0; i < thumbnail.length; i++) {
-            thumbnail[i].onclick = function () {
-               var newSrc = this.querySelector('img').src;
-               var newAlt = this.querySelector('img').alt;
-               changeMainImg (newSrc, newAlt);
+         // for (var i = 0; i < 5, i++) {
+         //    var img = "dicefaces/" + numbers[i]+ ".png";
+         //    var change = "#dice" + (i+1);
+         //    document.querySelector(change + 'img').src = img;
+         // }
+         var check = false;
+         var diceface = document.querySelectorAll('.diceface');
+         document.querySelector("#guess-btn").onclick = function () {
+            var numbers = [];
+         
+         for (var i = 0; i < 5; i++) {
+            var num = Math.floor( Math.random() * 6 + 1);
+            numbers.push(num);
+            var guess = document.querySelector("#guess-input").value;
+            if (parseInt(guess) === num) {
+               check = true;
             }
          }
-         var changeMainImg = function(newSrc, newAlt) {
-            document.querySelector('#display').src = newSrc;
-            document.querySelector('#display').alt = newAlt;
-            document.querySelector('#caption').innerHTML = newAlt;
+         for (var i = 0; i < 5; i++) {
+            var img = "dicefaces/" + numbers[i]+ ".png";
+            var change = "#dice" + (i+1);
+            document.querySelector(change + ' img').src = img;
          }
-         
-         // document.querySelector('#langlearn').onclick = function(){
-         // document.querySelector('#display').src = "language.jpeg"
-         // document.querySelector('#display').alt = "Chinese language learning"
-         // }
-         
-         // document.querySelector('#concert').onclick = function(){
-         // document.querySelector('#display').src = "concert1.jpeg"
-         // document.querySelector('#display').alt = "going to a concert"
-         
-         
-         // } 
-         // /* document.querySelector('#concert').onmouseleave = function(){
-         // document.querySelector('#display').src = "language.jpeg"
-         // document.querySelector('#display').alt = "Language Learning"
-         // } */
-         // document.querySelector('#cookingg').onclick = function(){
-         // document.querySelector('#display').src = "cooking.jpeg"
-         // document.querySelector('#display').alt = "Pastry dough cut out into tiny hearts"
-         // } 
-         // /*
-         // document.querySelector('#cookingg').onmouseleave = function(){
-         // document.querySelector('#display').src = "language.jpeg"
-         // document.querySelector('#display').alt = "Language Learning"
-         // }
-         // */
-         // document.querySelector('#cafe').onclick = function(){
-         // document.querySelector('#display').src = "cafe1.jpeg"
-         // document.querySelector('#display').alt = "Brown and white cafe"
-         // } 
-         // document.querySelector('#friends').onclick = function(){
-         // document.querySelector('#display').src = "friends.jpeg"
-         // document.querySelector('#display').alt = "Brown and white cafe"
-         // } 
-         // /*
-         // document.querySelector('#cafe').onmouseleave = function(){
-         // document.querySelector('#display').src = "language.jpeg"
-         // document.querySelector('#display').alt = "Language Learning"
-         // }
-         // */
-         
+         isCorrectGuess(check);
+         check = false;
+         };
+         function isCorrectGuess(check){
+         if (check === true) {
+            document.querySelector("#results").innerHTML = "You guessed it, baddie! You win!";
+            document.querySelector("#results").style.color = "green";
+         } else {
+            document.querySelector("#results").innerHTML = "Incorrect. You lose.";
+            document.querySelector("#results").style.color = "red";
+         }
+         }         
+            
       </script>
    </body>
 </html>
