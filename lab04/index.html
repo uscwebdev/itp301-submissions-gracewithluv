@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
+      <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/010/977/613/original/plaid-brown-heart-png.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+      <title> grace's assignment 1 | gallery </title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+   <style>
+      body {
+      background-color: #FCF8F2;
+      font-family: 'Karla', sans-serif ;
+      }
+      h1 {
+      font-family: 'Roboto Mono', sans-serif;
+      margin-top: -10px;
+      }
+      #main {
+      margin: 0 auto;
+      width: 750px;
+      padding: 40px;
+      margin-top: 2.5%;
+      background-color: white;
+      border: .5px solid #554C3A;
+      text-align: center;
+      overflow: auto;
+      }
+      /* #column1 {
+      float: left;
+      }*/
+      #header, #next {
+      width: 60px;
+      }
+      #clearfloat {
+      float: none;
+      }
+      .return {
+      margin-bottom: -12px;
+      padding: 7px;
+      font-family: 'Karla', sans-serif;
+      border-radius: 10px;
+      border: 1px dashed #554C3A;
+      background-color: white;
+      transition: 0.4s ease-in;
+      }
+      .return {
+      transition: 0.4s ease-in;
+      }
+      .return:hover {
+      background-color: #554C3A;
+      border: 1px dashed white;
+      color: white;
+      transition: 0.4s ease-in;
+      }
+      .underline {
+      color: white;
+      width: 30px;
+      }
+      .thumbnail {
+      width: 90px;
+      display: inline-block;
+      height: 90px;
+      margin: 0px 25px;
+      border: 3px solid white;
+      overflow: hidden;
+      }
+      .thumbnail2 {
+      width: 685px;
+      display: inline-block;
+      height: 300px;
+      margin: 0px 10px;
+      border: 3px solid white;
+      overflow: hidden;
+      }
+      .thumbnail2 img {
+      margin-top: -180px;
+      }
+      .landscape {
+      width: auto;
+      height: 100%;
+      }
+      .portait {
+      width: 100%;
+      height: auto;
+      }
+   </style>
+</head>
+   <body>
+      <br>
+      <div id="main">
+      <h1> grace's photo gallery of interests</h1>
+      <hr id="header">
+      <p> explore some of my interests & hobbies by clicking on the photos below :) </p>
+      <br>
+      <div class="thumbnail">
+         <img class="portait" id="langlearn" src="language.jpeg" alt="learning languages, like chinese, spanish, and korean">
+      </div>
+      <div class="thumbnail">
+         <img class="portait" id="concert" src="concert1.jpeg" alt="attending concerts of all genres">
+      </div>
+      <div class="thumbnail">
+         <img class="portait" id="cookingg" src="cooking.jpeg" alt="baking & cooking">
+      </div>
+      <div class="thumbnail">
+         <img class="portait" id="cafe" src="cafe1.jpeg" alt="cafe-hopping (basically trying out new cafes)">
+      </div>
+       <div class="thumbnail">
+         <img class="portait" id="friends" src="friends.jpeg" alt="hanging out with my lovely friends :)">
+      </div>
+      <br><br>
+      <div class="thumbnail2">
+         <img class="portait" id="display" src="language.jpeg" alt="">
+      </div>
+      <p id="caption"> learning languages, like chinese, spanish, and korean</p>
+      <a href="https://uscwebdev.github.io/itp301-submissions-gracewithluv/"><button class="return">back home</button></a>
+   </div>
+      <script type="text/javascript">
+
+         var thumbnail = document.querySelectorAll('.thumbnail');
+         var caption = document.querySelector('#caption');
+
+         for (var i = 0; i < thumbnail.length; i++) {
+            thumbnail[i].onclick = function () {
+               var newSrc = this.querySelector('img').src;
+               var newAlt = this.querySelector('img').alt;
+               changeMainImg (newSrc, newAlt);
+            }
+         }
+         var changeMainImg = function(newSrc, newAlt) {
+            document.querySelector('#display').src = newSrc;
+            document.querySelector('#display').alt = newAlt;
+            document.querySelector('#caption').innerHTML = newAlt;
+         }
+         
+         // document.querySelector('#langlearn').onclick = function(){
+         // document.querySelector('#display').src = "language.jpeg"
+         // document.querySelector('#display').alt = "Chinese language learning"
+         // }
+         
+         // document.querySelector('#concert').onclick = function(){
+         // document.querySelector('#display').src = "concert1.jpeg"
+         // document.querySelector('#display').alt = "going to a concert"
+         
+         
+         // } 
+         // /* document.querySelector('#concert').onmouseleave = function(){
+         // document.querySelector('#display').src = "language.jpeg"
+         // document.querySelector('#display').alt = "Language Learning"
+         // } */
+         // document.querySelector('#cookingg').onclick = function(){
+         // document.querySelector('#display').src = "cooking.jpeg"
+         // document.querySelector('#display').alt = "Pastry dough cut out into tiny hearts"
+         // } 
+         // /*
+         // document.querySelector('#cookingg').onmouseleave = function(){
+         // document.querySelector('#display').src = "language.jpeg"
+         // document.querySelector('#display').alt = "Language Learning"
+         // }
+         // */
+         // document.querySelector('#cafe').onclick = function(){
+         // document.querySelector('#display').src = "cafe1.jpeg"
+         // document.querySelector('#display').alt = "Brown and white cafe"
+         // } 
+         // document.querySelector('#friends').onclick = function(){
+         // document.querySelector('#display').src = "friends.jpeg"
+         // document.querySelector('#display').alt = "Brown and white cafe"
+         // } 
+         // /*
+         // document.querySelector('#cafe').onmouseleave = function(){
+         // document.querySelector('#display').src = "language.jpeg"
+         // document.querySelector('#display').alt = "Language Learning"
+         // }
+         // */
+         
+      </script>
+   </body>
+</html>

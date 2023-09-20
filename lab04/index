@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
+   <head>
+      <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/010/977/613/original/plaid-brown-heart-png.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&family=Roboto+Mono&display=swap" rel="stylesheet">
+      <title> grace's assignment 1 | gallery </title>
+   </head>
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <link rel="stylesheet" href="">
+   <style>
+      body {
+      background-color: #FCF8F2;
+      font-family: 'Karla', sans-serif ;
+      }
+      h1 {
+      font-family: 'Roboto Mono', sans-serif;
+      margin-top: -10px;
+      }
+      #main {
+      margin: 0 auto;
+      width: 700px;
+      padding: 40px;
+      background-color: white;
+      border: .5px solid #554C3A;
+      text-align: center;
+      overflow: auto;
+      }
+      /* #column1 {
+      float: left;
+      }*/
+      #header, #next {
+      width: 60px;
+      }
+      #next {
+      margin-bottom: px;
+      }
+      #clearfloat {
+      float: none;
+      }
+      .return {
+      margin-bottom: -12px;
+      padding: 7px;
+      font-family: 'Karla', sans-serif;
+      border-radius: 10px;
+      border: 1px dashed #554C3A;
+      background-color: white;
+      transition: 0.4s ease-in;
+      }
+      .return {
+      transition: 0.4s ease-in;
+      }
+      .return:hover {
+      background-color: #554C3A;
+      border: 1px dashed white;
+      color: white;
+      transition: 0.4s ease-in;
+      }
+      .underline {
+      color: white;
+      width: 30px;
+      }
+      .thumbnail {
+      width: 110px;
+      display: inline-block;
+      height: 110px;
+      margin: 0px 25px;
+      border: 3px solid white;
+      overflow: hidden;
+      }
+      .thumbnail2 {
+      width: 620px;
+      display: inline-block;
+      height: 400px;
+      margin: 0px 10px;
+      border: 3px solid white;
+      overflow: hidden;
+      }
+      .thumbnail2 img {
+      margin-top: -180px;
+      }
+      .landscape {
+      width: auto;
+      height: 100%;
+      }
+      .portait {
+      width: 100%;
+      height: auto;
+      }
+   </style>
+   <script src=""></script>
+   <body>
+      <br>
+      <div id="main">
+      <h1> grace's photo gallery of interests</h1>
+      <hr id="header">
+      <p> explore some of my interests by clicking on the photos below :) </p>
+      <br>
+      <div class="thumbnail">
+         <img class="portait" id="langlearn" src="language.jpeg" alt="Chinese language learning">
+      </div>
+      <div class="thumbnail">
+         <img class="portait" id="concert" src="concert1.jpeg" alt="ATINY holding up lighttiny at ATEEZ concert">
+      </div>
+      <div class="thumbnail">
+         <img class="portait" id="cookingg" src="cooking.jpeg" alt="Pastry dough cut out into tiny hearts">
+      </div>
+      <div class="thumbnail">
+         <img class="portait" id="cafe" src="cafe1.jpeg" alt="Brown and white cafe">
+      </div>
+      <br><br>
+      <div class="thumbnail2">
+         <img class="portait" id="display" src="language.jpeg" alt="Chinese language learning">
+      </div>
+      <br><br>
+      <a href="https://uscwebdev.github.io/itp301-submissions-gracewithluv/"><button class="return">back home</button></a>
+      <script type="text/javascript">
+         document.querySelector('#langlearn').onclick = function(){
+         document.querySelector('#display').src = "language.jpeg"
+         document.querySelector('#display').alt = "Chinese language learning"
+         }
+         
+         document.querySelector('#concert').onclick = function(){
+         document.querySelector('#display').src = "concert1.jpeg"
+         document.querySelector('#display').alt = "going to a concert"
+         
+         
+         } 
+         /* document.querySelector('#concert').onmouseleave = function(){
+         document.querySelector('#display').src = "language.jpeg"
+         document.querySelector('#display').alt = "Language Learning"
+         } */
+         document.querySelector('#cookingg').onclick = function(){
+         document.querySelector('#display').src = "cooking.jpeg"
+         document.querySelector('#display').alt = "Pastry dough cut out into tiny hearts"
+         } 
+         /*
+         document.querySelector('#cookingg').onmouseleave = function(){
+         document.querySelector('#display').src = "language.jpeg"
+         document.querySelector('#display').alt = "Language Learning"
+         }
+         */
+         document.querySelector('#cafe').onclick = function(){
+         document.querySelector('#display').src = "cafe1.jpeg"
+         document.querySelector('#display').alt = "Brown and white cafe"
+         } 
+         /*
+         document.querySelector('#cafe').onmouseleave = function(){
+         document.querySelector('#display').src = "language.jpeg"
+         document.querySelector('#display').alt = "Language Learning"
+         }
+         */
+         
+         
+      </script>
+   </body>
+</html>
